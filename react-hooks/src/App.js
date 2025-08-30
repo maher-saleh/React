@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import UseState from './hooks/useStateHook';
 import { Link, Route, Routes } from 'react-router-dom';
+import UseEffectHook from './hooks/useEffectHook';
+import UseStateHook from './hooks/useStateHook';
 
 function App() {
   return (
@@ -13,11 +15,13 @@ function App() {
           <ul>
             <li>
               <Link to="/hooks/useStateHook">useState hook</Link>
+              <Link to="/hooks/useEffectHook">useEffect hook</Link>
             </li>
           </ul>
         </nav>
         <Routes>
-          <Route path="/hooks/useStateHook" element={<UseState />} />
+          <Route path="/hooks/useStateHook" element={<UseStateHook />} />
+          <Route path="/hooks/useEffectHook" element={<UseEffectHook />} />
         </Routes>
       </header>
     </div>
